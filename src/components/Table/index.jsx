@@ -29,7 +29,7 @@ class Table extends React.Component {
         });
     };
 
-    //Used for Sorth Method
+    //Used for Sort Method
     sortByName() {
         if (this.state.sortDirection < 1) {
             this.setState({
@@ -56,10 +56,11 @@ class Table extends React.Component {
                     <thead>
                         <tr>
                             <th scope="col">Image</th>
-                            <th onClick={() => this.sortByName()}>Name</th>
+                            <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
                             <th>DOB</th>
+                            <button onClick={() => this.sortByName()}>Sort by name</button>
                         </tr>
                     </thead>
                     <tbody>
