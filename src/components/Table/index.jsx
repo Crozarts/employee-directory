@@ -14,14 +14,12 @@ class Table extends React.Component {
         };
     }
 
-    //Referenced activity 20-07
     componentDidMount() {
         axios.get("https://randomuser.me/api/?results=25&nat=us").then((res) => {
             this.setState({ users: res.data.results });
         });
     }
 
-    //Handle Change - Provides result for onclick
     handleInputChange = (event) => {
         let { name, value } = event.target;
         this.setState({
@@ -29,7 +27,6 @@ class Table extends React.Component {
         });
     };
 
-    //Used for Sort Method
     sortByName() {
         if (this.state.sortDirection < 1) {
             this.setState({
